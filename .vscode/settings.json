@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "network_structure.h": "c",
+        "print_debug.h": "c"
+    }
+}

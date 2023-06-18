@@ -1,22 +1,16 @@
 #ifndef MLP_INIT
 #define MLP_INIT
 
-/*Struct containing the multi layer perceptron architecture*/
+#include  "network_structure.h"
 
-typedef struct MLP{
+float generateGaussian(float mean, float stdDev);
 
-    int inLayerSize;
-    int outLayerSize;
-    int nHiddenLayers;
-    int hiddenLayerSize;
-    int totalLayersSize;
-
-    float ***weigthMatrix;
-    float ***biasMatrix;
-    
-} multiLayerPerceptron;
-
+void W_init(multiLayerPerceptron *mlp);
+void B_init(multiLayerPerceptron *mlp);
 void mlp_init(multiLayerPerceptron *mlp, int inLayerSize, int outLayerSize, int nHiddenLayers, int hiddenLayerSize);
+
+void W_free(multiLayerPerceptron *mlp);
+void B_free(multiLayerPerceptron *mlp);
 void mlp_free(multiLayerPerceptron *mlp);
 
 #endif
